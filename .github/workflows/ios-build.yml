@@ -38,10 +38,11 @@ jobs:
         zip -r ../../../../app.ipa .
         
     - name: Upload IPA artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ios-build-ipa
         path: build/app.ipa
+        retention-days: 30
         
     - name: Download IPA (optional for testing)
       run: |
