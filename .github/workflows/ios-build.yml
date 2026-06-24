@@ -21,7 +21,8 @@ jobs:
       uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
-        flutter-version: '3.13.x'
+        flutter-version: '3.13.9'
+        cache: true
         
     - name: Enable Xcode license
       run: sudo xcodebuild -license accept
